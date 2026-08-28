@@ -132,8 +132,17 @@ sudo apt install -y curl wget gnupg2 ca-certificates tree
 
 ```bash
 whoami          # your UNIX username
+```
+
+```bash
 lsb_release -a  # confirms Ubuntu version
+```
+
+```bash
 ps -p 1         # must show systemd
+```
+
+```bash
 pwd             # should be /home/<your-username>
 ```
 
