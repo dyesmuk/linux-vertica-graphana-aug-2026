@@ -32,7 +32,8 @@ Keep all 11 files in one folder. Each one is self-contained — recap, concepts,
 | **Batch Size** | 5 participants |
 | **Target Audience** | Entry-level freshers (basic → intermediate coverage) |
 | **Format** | Full-day, in-classroom, Hyderabad |
-| **Duration** | 10 working days (80 hours) |
+| **Duration** | 10 working days |
+| **Timings** | 10 AM - 5 PM |
 | **Start Date** | Friday, 28 August 2026 |
 | **Training Completion** | Thursday, 10 September 2026 |
 | **Topic Sequence** | Linux → Vertica → Grafana → Capstone (Integration Project) |
