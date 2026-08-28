@@ -27,7 +27,6 @@ Keep all 11 files in one folder. Each one is self-contained — recap, concepts,
 
 ## 🎯 Program Overview
 
-| | |
 |---|---|
 | **Batch Size** | 5 participants |
 | **Target Audience** | Entry-level freshers (basic → intermediate coverage) |
@@ -35,7 +34,6 @@ Keep all 11 files in one folder. Each one is self-contained — recap, concepts,
 | **Duration** | 10 working days (80 hours) |
 | **Start Date** | Friday, 28 August 2026 |
 | **Training Completion** | Thursday, 10 September 2026 |
-| **Client Go-Live** | 19 September 2026 (~1 week buffer built in after training) |
 | **Topic Sequence** | Linux → Vertica → Grafana → Capstone (Integration Project) |
 
 **Why this order?** Grafana is a visualization layer — it's only meaningful once real data exists underneath it. Teaching Vertica before Grafana means every Grafana exercise runs against *live Vertica tables*, not dummy sample data. That turns the last two days into genuine integration practice instead of an isolated tool walkthrough.
