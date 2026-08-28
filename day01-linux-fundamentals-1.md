@@ -16,7 +16,9 @@ You're walking in with a stock Windows 11 laptop. Let's fix that.
 
 ### Step 0 — Check if WSL/Ubuntu is already there
 
-Some laptops come pre-imaged with dev tools. Check before you install anything:
+Some laptops come pre-imaged with dev tools. Check before you install anything.
+
+**🪟 Run in PowerShell** (Start → search "PowerShell" → open it, admin not required just to check):
 
 ```powershell
 wsl -l -v
@@ -33,6 +35,8 @@ wsl -l -v
 
 **Reuse or reset?** If `Ubuntu` is already there, don't just assume it's fine to build on. A pre-existing instance might have leftover packages, a different Ubuntu version, or configs that don't match the rest of the batch — and for a 5-person class, everyone starting from the *same* known-good baseline matters more than saving 10 minutes. Recommended: wipe it and start clean.
 
+**🪟 Run in PowerShell:**
+
 ```powershell
 wsl --unregister Ubuntu
 ```
@@ -43,7 +47,9 @@ Once unregistered (or if nothing existed to begin with), continue to Step 1 — 
 
 ### Step 1 — Enable WSL2 + install Ubuntu
 
-Open **PowerShell as Administrator** (Start → search "PowerShell" → Run as administrator):
+Open **PowerShell as Administrator** (Start → search "PowerShell" → Run as administrator).
+
+**🪟 Run in PowerShell (as Administrator):**
 
 ```powershell
 wsl --install -d Ubuntu
@@ -59,13 +65,17 @@ After restart, open **Ubuntu** from the Start menu. First boot takes a minute, t
 
 ### Step 3 — Update everything
 
+**🐧 Run inside Ubuntu** (the terminal that opened after Step 2):
+
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
 ### Step 4 — Turn on systemd
 
-Vertica (Day 5) and Grafana (Day 8) both run as systemd services. Switch it on:
+Vertica (Day 5) and Grafana (Day 8) both run as systemd services. Switch it on.
+
+**🐧 Run inside Ubuntu:**
 
 ```bash
 sudo nano /etc/wsl.conf
@@ -78,14 +88,20 @@ Add (or append) this block:
 systemd=true
 ```
 
-Save and exit: `Ctrl+O`, `Enter`, `Ctrl+X`. Now restart WSL2 — **from PowerShell, not inside Ubuntu**:
+Save and exit: `Ctrl+O`, `Enter`, `Ctrl+X`. Now restart WSL2.
+
+**🪟 Run in PowerShell** (switch back to your PowerShell window — do NOT run this inside Ubuntu):
 
 ```powershell
 wsl --shutdown
 wsl
 ```
 
+That second `wsl` drops you right back into your Ubuntu terminal, now with systemd running.
+
 ### Step 5 — Verify systemd is alive
+
+**🐧 Run inside Ubuntu:**
 
 ```bash
 ps -p 1
@@ -101,11 +117,15 @@ If it says `systemd`, move on. If it doesn't, re-check Step 4 and repeat.
 
 ### Step 6 — Install today's basics
 
+**🐧 Run inside Ubuntu:**
+
 ```bash
 sudo apt install -y curl wget gnupg2 ca-certificates tree
 ```
 
 ### ✅ Checklist — don't proceed until this passes
+
+**🐧 Run inside Ubuntu:**
 
 ```bash
 whoami          # your UNIX username
