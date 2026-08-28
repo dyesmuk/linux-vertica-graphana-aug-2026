@@ -88,12 +88,15 @@ Add (or append) this block:
 systemd=true
 ```
 
-Save and exit: `Ctrl+O`, `Enter`, `Ctrl+X`. Now restart WSL2.
+Save and exit: `Ctrl+O`, `Enter`, `Ctrl+X`, `Exit` and restart WSL2.
 
-**🪟 Run in PowerShell** (switch back to your PowerShell window — do NOT run this inside Ubuntu):
+**🪟 Run in PowerShell**:
 
 ```powershell
 wsl --shutdown
+```
+
+```powershell
 wsl
 ```
 
