@@ -28,7 +28,6 @@ Keep all 11 files in one folder. Each one is self-contained — recap, concepts,
 ## 🎯 Program Overview
 
 | | |
-|---|---|
 | **Batch Size** | 5 participants |
 | **Target Audience** | Entry-level freshers (basic → intermediate coverage) |
 | **Format** | Full-day, in-classroom, Hyderabad |
